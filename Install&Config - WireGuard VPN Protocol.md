@@ -25,12 +25,13 @@
       ```
       
       **Step 1** -:   Update or  Upgrade the package management
-        ```
+      
+        ``` Update
          sudo apt-get update -y  
         ```
         
         or
-        ```
+        ``` Upgrade
         sudo apt-get upgrade -y 
         ```
         
@@ -42,12 +43,12 @@
         
      **Step 3** -:   Install WireGuard VPN Software on the System
      
-        ```
+        ``` Ubuntu
         sudo apt-get install wireguard -y                 # Ubuntu  
         ```
         
         
-        ```        
+        ``` Redhat       
         sudo yum install wireguard-tools -y             # Redhat
         ```
         
