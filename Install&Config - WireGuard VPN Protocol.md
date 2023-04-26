@@ -24,33 +24,34 @@
       sudo hostnamectl set-hostname wgserv
       ```
       
-      **Step 1** -:   Update or  Upgrade the package management
+    **Step 1** -:   Update or  Upgrade the package management
       
-        ``` Update
-         sudo apt-get update -y  
-        ```
+      ``` Update
+      sudo apt-get update -y  
+      ```
         
-        or
-        ``` Upgrade
-        sudo apt-get upgrade -y 
-        ```
+      or
+      
+      ``` Upgrade
+      sudo apt-get upgrade -y 
+      ```
         
-     **Step 2** -:   Install iptables,   net-tools
+    **Step 2** -:   Install iptables,   net-tools
      
-        ```
-        sudo apt-get install iptables net-tools  -y 
-        ```
+      ```
+      sudo apt-get install iptables net-tools  -y 
+      ```
         
-     **Step 3** -:   Install WireGuard VPN Software on the System
+    **Step 3** -:   Install WireGuard VPN Software on the System
      
-        ``` Ubuntu
-        sudo apt-get install wireguard -y                 # Ubuntu  
-        ```
+      ``` Ubuntu
+      sudo apt-get install wireguard -y                 # Ubuntu  
+      ```
         
         
-        ``` Redhat       
-        sudo yum install wireguard-tools -y             # Redhat
-        ```
+      ``` Redhat       
+      sudo yum install wireguard-tools -y             # Redhat
+      ```
         
         
         
