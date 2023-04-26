@@ -29,7 +29,9 @@
         ```
         sudo apt-get update -y  
         ```
+        
              or
+        
         ```
         sudo apt-get upgrade -y 
         ```
@@ -45,8 +47,10 @@
         ```
         sudo apt-get install wireguard -y                 # Ubuntu  
         ```
+        
         ```
         sudo yum install wireguard-tools -y             # Redhat
         ```
+        
         
         
