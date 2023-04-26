@@ -1,7 +1,7 @@
 
 # A GUIDE TO THE INSTALLATION AND CONFIGURATION OF WIREGUARD VPN 
 
-### A VPN is a secure/encrypt tunnel between your device and a secure Server, then sending your traffic through it. 
+#### A VPN is a secure/encrypt tunnel between your device and a secure Server, then sending your traffic through it. 
 
 ### A Tunnel is a medium created between two devices/nodes through which traffic flow to and from. A Secure Tunnel is a Tunnel with only a secure data/traffic exchange between the nodes.
 
