@@ -25,6 +25,7 @@
       ```
       
       **Step 1** -:   Update or  Upgrade the package management
+      
         ```
         sudo apt-get update -y  
         ```
@@ -34,11 +35,13 @@
         ```
         
      **Step 2** -:   Install iptables,   net-tools
+     
         ```
         sudo apt-get install iptables net-tools  -y 
         ```
         
      **Step 3** -:   Install WireGuard VPN Software on the System
+     
         ```
         sudo apt-get install wireguard -y                 # Ubuntu  
         ```
