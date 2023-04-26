@@ -101,6 +101,7 @@
     ```
     touch wgs0.conf       
     ```
+    
        ![image](https://user-images.githubusercontent.com/113307504/234725647-82a1ae62-a3c5-4f77-9d0d-8853f182a2f3.png)
 
 
@@ -174,48 +175,58 @@
     ```
     sudo ufw  status                      # Check status of the UFW  
     ````
+    
     ````
     sudo   ufw allow 51820/udp        ## Open the port 51820 on UDP
     ```
+    
     ```
     sudo ufw enable                        ## To  enable ufw
     ```
+    
     ```
     sudo ufw disable                         ## To disable ufw
     ```
 
-    **Step 10a** -:   Bring up  the Network Interface - wgs0 
+  **Step 10a** -:   Bring up  the Network Interface - wgs0 
     ```
     wg-quick  up  wgs0       # Start the wg0 Interface
     ```
+    
     ```
     wg     or    sudo wg          # Display the Interface Details
     ```
+    
      ![image](https://user-images.githubusercontent.com/113307504/234724657-6ead729e-be03-4c49-a2b0-ddd6a3389e85.png)
 
    
-    **Step 10b** -:  Put down the Network Interface - wgs0               
+   **Step 10b** -:  Put down the Network Interface - wgs0               
     ```
     wg-quick  down wgs0         # To put down wg0 Interface
     ```
+    
     ```
     ip link  or  sudo  ip a show wgs0      # Show the Network Interfaces on the Host.
     ```
     
 
-    **Step 11** -:   Check the status. Start and Enable WireGuard Sever. 
+   **Step 11** -:   Check the status. Start and Enable WireGuard Sever. 
                       ## NOTE: PUT  DOWN THE NETWORK INTERFACE  BEFORE EDITTING IT 
     ``` 
     systemctl status wg-quick@wgs0                # Check the status of wg-quick on wgs0                 ```
+    
     ```
     systemctl start wg-quick@wgs0.service     # Start wg-quick on wgs0  service
     ```
+    
     ```
     systemctl enable wg-quick@wgs0.service        # Enable wg-quick on wgs0 service
     ```
+    
     ```
     systemctl restart wg-quick@wgs0.service     # Restart the wg-quick on wgs0 service
     ```
+    
     ```
     systemctl stop wg-quick@wgs0.service          # Stop the wq-quick on wgs0 service
     ```
