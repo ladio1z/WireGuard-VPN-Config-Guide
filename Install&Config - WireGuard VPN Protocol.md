@@ -8,3 +8,13 @@
 #### The driving force (ie Protocol) creating each encrypted tunnel, which determines that tunnel’s shape and sizes. WireGuard is just one of the several different types of protocols used to create these tunnels.
 
 #### WireGuard is a communication protocol and free and open-source software that implements encrypted virtual private network (VPN), and was designed with the goal of easy use, high speed performance, and low attack surface. WireGuard cryptographic primitives may be faster and it is built into the Linux Kernel.
+
+
+### The below are the procedure for the installation and configuration of a WireGuard VPN between a VPN Server and a Client.
+
+## At the VPN Server
+   ### Installation Requirement
+a.	Any OS
+b.	Update or Upgrade the Package Management
+c.	Open port 51820 (WireGuard VPN default)
+
