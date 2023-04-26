@@ -108,8 +108,8 @@
     ```
     vi wgs0.conf       
     ```
-    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
     ```		
     [Interface]
            # A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
@@ -132,10 +132,9 @@
 
            # Specify the listening port of WireGuard. This is the defaut.
       ListenPort = 51820
+      
     ```
-    
-    
-   
+      
            # After the Installation and Configuration at the Client side 
                  # we update the Network Interface at the Server side 
                      # with below details for **each peer(client)**
