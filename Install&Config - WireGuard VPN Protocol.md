@@ -50,7 +50,24 @@
       ``` Redhat       
       sudo yum install wireguard-tools -y             # Redhat
       ```
-        
+     
+    **Step 4a** -:  Switch to root user profile.
+           sudo  su   -    
+     
+    **Step 4b** -:  Go to /etc/wireguard   WireGurad directory 
+                         cd   /etc/wireguard/       
+
+    **Step 5** -:   Enable IP Forwarding to route packets between VPN Clients and the Internet
+                           # Check IP forward on ipv4. If result is 0 set it to 1
+                                 cat  /proc/sys/net/ipv4/ip_forward       
+                       
+                       sudo vi  /etc/sysctl.conf                  # View and Edit the System Config. file
+                                uncomment this line  ……     net.ipv4.ip_forward=1
+                                net.ipv4.ip_forward = 1     #   or add  this to the file
+                                        :wq!               # To save and quite
+                        sudo sysctl -p     # View the set value or uncomment value and reset the system.
+
+     
         
         
         
