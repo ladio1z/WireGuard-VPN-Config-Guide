@@ -112,7 +112,7 @@
     ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
     ```		
     [Interface]
-            ## A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
+   ### A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
        Privatekey = sDMJiu ……. LhWUY=
   	    ## Address: A private IP address for wg0 interface
 	Address = 120.0.0.1/32
@@ -122,7 +122,7 @@
 	    ## NOTE the **enp0s9** must be the public Network Interface of the Server. 
  	                 ## Some distors are of name  **eth0**
 
-## The PostUp will run when the WG Server starts the Virtual VPN tunnel
+### The PostUp will run when the WG Server starts the Virtual VPN tunnel
             PostUp = iptables -A FORWARD -i wg0 -j ACCEPT
             PostUP =  iptables -t nat -A POSTROUTING -o enp0s9 -j MASQUERADE
 	
