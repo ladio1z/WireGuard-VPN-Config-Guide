@@ -112,7 +112,7 @@
     ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
     ```		
     [Interface]
-  #### A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
+  ##### A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
        Privatekey = sDMJiu ……. LhWUY=
   #### Address: A private IP address for wg0 interface
 	Address = 120.0.0.1/32
