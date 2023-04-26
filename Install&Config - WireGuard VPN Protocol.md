@@ -14,7 +14,7 @@
 
 ## At the VPN Server
    ### Installation Requirement
- 1. Any OS
- 1.Update or Upgrade the Package Management
- 1. Open port 51820 (WireGuard VPN default)
+ - Any OS
+ - Update or Upgrade the Package Management
+ - Open port **51820** (WireGuard VPN default)
 
