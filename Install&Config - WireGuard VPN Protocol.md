@@ -72,10 +72,12 @@
      sudo vi  /etc/sysctl.conf                  # View and Edit the System Config. file
      ```
      
-      **uncomment this line  ……     net.ipv4.ip_forward=1**
-  
-      **net.ipv4.ip_forward = 1     #   or add  this to the file**
-     
+      **uncomment this line  …… OR add  this to the file**
+                          
+      ```
+      net.ipv4.ip_forward=1
+      ```
+      
      ```
      :wq!               # To save and quite
      ```
@@ -102,11 +104,24 @@
      ![image](https://user-images.githubusercontent.com/113307504/234717850-5568565b-d2e8-4dc6-89b8-70478634d1a2.png)
 
 
-    **Step 8** -:   Open wgs0.conf  and configure the Network Interface
+    **Step 8** -:   Open wgs0.conf  and configure the Network Interface as below format.
     ```
     vi wgs0.conf       
     ```
-    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+    ```		
+    [Interface]
+		       ## A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
+                          Privatekey = sDMJiu ……. LhWUY=
+  	                   ## Address: A private IP address for wg0 interface
+	            Address = 120.0.0.1/32
+                               ## Saving Configuration File
+	            SaveConfig =  true
+
+		  ## NOTE the **enp0s9** must be the public Network Interface of the Server. 
+ 	                               ## Some distors are of name  **eth0**
+
     
     
     
