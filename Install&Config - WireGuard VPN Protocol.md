@@ -112,7 +112,7 @@
     ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
     ```		
     [Interface]
-  ##### A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
+        ** # A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )**
        Privatekey = sDMJiu ……. LhWUY=
   #### Address: A private IP address for wg0 interface
 	Address = 120.0.0.1/32
@@ -132,7 +132,9 @@
 
   #### Specify the listening port of WireGuard. This is the defaut.
         ListenPort = 51820
-
+    ```
+    
+   
   #### After the Installation and Configuration at the Client side 
   ####    we update the Network Interface at the Server side 
   ####         with below details for each peer(client)
