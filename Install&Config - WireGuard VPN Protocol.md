@@ -112,43 +112,47 @@
     ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
     ```		
     [Interface]
-        ** # A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )**
-       Privatekey = sDMJiu ……. LhWUY=
-  #### Address: A private IP address for wg0 interface
-	Address = 120.0.0.1/32
-  #### Saving Configuration File
-	SaveConfig =  true
+           # A privatekey of the Server you copied ( cat /etc/wireguard/privatekey )
+      Privatekey = sDMJiu ……. LhWUY=
+           # Address: A private IP address for wg0 interface
+      Address = 120.0.0.1/32
+           # Saving Configuration File
+      SaveConfig =  true
 
-  #### NOTE the **enp0s9** must be the public Network Interface of the Server. 
-  #### Some distors are of name  **eth0**
+           # NOTE the **enp0s9** must be the public Network Interface of the Server. 
+           # Some distors are of name  **eth0**
 
-  #### The PostUp will run when the WG Server starts the Virtual VPN tunnel
-        PostUp = iptables -A FORWARD -i wg0 -j ACCEPT
-        PostUP =  iptables -t nat -A POSTROUTING -o enp0s9 -j MASQUERADE
+           # The PostUp will run when the WG Server starts the Virtual VPN tunnel
+      PostUp = iptables -A FORWARD -i wg0 -j ACCEPT
+      PostUP =  iptables -t nat -A POSTROUTING -o enp0s9 -j MASQUERADE
 	
-  #### The PostDown rules run when the WG Server stops the Virtual VPN tunnel
-        PostDown = iptables -D FORWARD -i wg0 -j ACCEPT
-        PostDown =  iptables -t nat -D POSTROUTING -o enp0s9 -j MASQUERADE
+           # The PostDown rules run when the WG Server stops the Virtual VPN tunnel
+      PostDown = iptables -D FORWARD -i wg0 -j ACCEPT
+      PostDown =  iptables -t nat -D POSTROUTING -o enp0s9 -j MASQUERADE
 
-  #### Specify the listening port of WireGuard. This is the defaut.
-        ListenPort = 51820
+           # Specify the listening port of WireGuard. This is the defaut.
+      ListenPort = 51820
     ```
     
+    
    
-  #### After the Installation and Configuration at the Client side 
-  ####    we update the Network Interface at the Server side 
-  ####         with below details for each peer(client)
+           # After the Installation and Configuration at the Client side 
+                 # we update the Network Interface at the Server side 
+                     # with below details for **each peer(client)**
+    ```
     [Peer]
-  #### A public key of the Client1 ( cat /etc/wireguard/publickey )
-        Publickey =   gF98uIOMNe ……..sDMJiu=
-  #### The assign IP address of Client1 Network Interface   
-        AllowedIPs = 120.0.0.2/32
-
+           # A public key of the Client1 ( cat /etc/wireguard/publickey )
+      Publickey =   gF98uIOMNe ……..sDMJiu=
+           # The assign IP address of Client1 Network Interface   
+      AllowedIPs = 120.0.0.2/32
+    ```
+    
+    ```
     [Peer]
-  #### A public key of the Client2 ( cat /etc/wireguard/publickey )
-        Publickey =    IOMNegFsDM ……..Jiu98u=
-  #### The assign IP address of Client2 Network Interface   
-        AllowedIPs = 120.0.0.3/32
+           # A public key of the Client2 ( cat /etc/wireguard/publickey )
+      Publickey =    IOMNegFsDM ……..Jiu98u=
+           # The assign IP address of Client2 Network Interface   
+      AllowedIPs = 120.0.0.3/32
 
     ```
     
