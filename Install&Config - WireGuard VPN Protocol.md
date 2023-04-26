@@ -19,7 +19,8 @@
  - Open port **51820** (WireGuard VPN default)
 
    ### Installation Steps:
-     Step 0 -:   Change the hostname to wgserver
-                  ```
-                  sudo hostnamectl set-hostname wgserver
-                  ```
+    Step 0 -:   Change the hostname to wgserver
+      ```
+      sudo hostnamectl set-hostname wgserv
+      ```
+
