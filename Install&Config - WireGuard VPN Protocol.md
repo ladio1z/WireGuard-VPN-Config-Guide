@@ -102,7 +102,7 @@
     touch wgs0.conf       
     ```
     
-       ![image](https://user-images.githubusercontent.com/113307504/234725647-82a1ae62-a3c5-4f77-9d0d-8853f182a2f3.png)
+      ![image](https://user-images.githubusercontent.com/113307504/234725647-82a1ae62-a3c5-4f77-9d0d-8853f182a2f3.png)
 
 
     **Step 8** -:   Open wgs0.conf  and configure the Network Interface as below format.
@@ -136,9 +136,9 @@
       
     ```
       
-           # After the Installation and Configuration at the Client side 
-                 # we update the Network Interface at the Server side 
-                     # with below details for each peer(client)
+           # After the Installation and Configuration at the WG Client side 
+                 # we update the Network Interface at the WG Server side 
+                     # with below details for each peer(WG client)
     ```
     [Peer]
            # A public key of the Client1 ( cat /etc/wireguard/publickey )
@@ -168,7 +168,7 @@
      ##### The Endpoint of the Peer are updated accordingly after connection is established.
     
     
-          # Enable the Server to listen on the WG set default port via 51820 UDP
+          # Enable the WG Server to listen on the WG Clients set default port via 51820 UDP
               # You could set any other port to listen on this Server
 
     **Step 9** -:   Configure UFW firewall to open WireGuard VPN Server 
@@ -197,7 +197,7 @@
     wg     or    sudo wg          # Display the Interface Details
     ```
     
-     ![image](https://user-images.githubusercontent.com/113307504/234724657-6ead729e-be03-4c49-a2b0-ddd6a3389e85.png)
+   ![image](https://user-images.githubusercontent.com/113307504/234724657-6ead729e-be03-4c49-a2b0-ddd6a3389e85.png)
 
    
    **Step 10b** -:  Put down the Network Interface - wgs0               
