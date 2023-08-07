@@ -383,13 +383,14 @@
       ```
 #### At both ends of the Server and Clients, run command ‘ **wg** ’ or  ‘ **wg show** ‘ ; if the feedback of its comes as the output with handshake interface means connection/a secure tunnel has been established  between nodes.
 
- /*
+ <!---
    **WireGuard VPN Server**                                    **WireGuard VPN Client**     
    ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/85d07c8d-589d-4e1a-9ad7-71d67992342d)     ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/c0bab941-7798-4e4a-bcf9-6f6b987c9774)
- */
+ -->
  
-   |                WireGuard VPN Server            |       WireGuard VPN Client                                |
+   |               ### WireGuard VPN Server        |       WireGuard VPN Client            |
    | --------------------------------------------- | ------------------------------------- |
    |  ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/085287fe-dfb3-4e65-a89e-848e88b93b99) |    ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/dc3782a0-8c12-4eb5-80a8-d3fa170f3d21) |
+
 
    
