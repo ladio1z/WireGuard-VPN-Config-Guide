@@ -244,55 +244,54 @@
     **Step 0** -:   Change the hostname to wgclient1
    
     ```
-    sudo hostnamectl set-hostname wgclient1
+     sudo hostnamectl set-hostname wgclient1
     ```
       
     **Step 1** -:   Update or  Upgrade the package management
       
     ``` 
-    sudo apt-get update -y  
+     sudo apt-get update -y  
     ```
-      or
-      
+      or    
     ``` 
-    sudo apt-get upgrade -y 
+     sudo apt-get upgrade -y 
     ```
 
     **Step 2** -:   Install iptables,   net-tools
     ```
-    sudo apt-get install iptables net-tools  -y 
+     sudo apt-get install iptables net-tools  -y 
     ```
   
     **Step 3** -:   Install WireGuard VPN Software on the System
    
     ``` 
-    sudo apt-get install wireguard -y                 # Ubuntu  
+     sudo apt-get install wireguard -y                 # Ubuntu  
     ```
-       or
+      or
     ```
-    sudo yum install wireguard-tools -y             # Redhat
+     sudo yum install wireguard-tools -y             # Redhat
     ```
    
     **Step 4a*** -:  Switch to root user profile.
     ```
-    sudo  su   -    
+     sudo  su   -    
     ```
 
      **Step 4b*** -:  Go to /etc/wireguard   WireGurad directory
      ```
-     cd   /etc/wireguard/       
+      cd   /etc/wireguard/       
      ```
 
      **Step 5a** -:  Create a private and public key pair for the WireGuard Client
                           # generate private key through which a publickey is created    
      ```
-     wg  genkey | tee privatekey | wg pubkey  > publickey      # ls   to list content     
+      wg  genkey | tee privatekey | wg pubkey  > publickey      # ls   to list content     
      ```
 
      **Step 5b** -:  Show and Copy Private key 
 
      ```
-     cat privatekey       
+      cat privatekey       
      ```
 
       ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/0c4266b1-bc44-459b-b938-d49b76b3d593)
@@ -300,7 +299,7 @@
 
      **Step 6** -:   Create a new config file called   wgs0.conf
       ```
-                       touch wgs0.conf
+       touch wgs0.conf
       ```
              
 
