@@ -29,7 +29,7 @@
       ``` 
       sudo apt-get update -y  
       ```
-      or
+               or
       
       ``` 
       sudo apt-get upgrade -y 
@@ -250,7 +250,7 @@
     ``` 
      sudo apt-get update -y  
     ```
-         or    
+               or    
     ``` 
      sudo apt-get upgrade -y 
     ```
@@ -264,7 +264,7 @@
     ``` 
      sudo apt-get install wireguard -y                 # Ubuntu  
     ```
-         or
+              or
     ```
      sudo yum install wireguard-tools -y             # Redhat
     ```
@@ -347,9 +347,9 @@
        wg-quick  up  wgs0       # Start the wgs0 Interface
       ```
       ```
-       wg     or    sudo wg          # Display the Interface Details
+       wg               # Display the Interface Details
       ```
-          or 
+               or 
       ```
        sudo wg          # Display the Interface Details
       ```
@@ -364,7 +364,7 @@
       ```
         ip link        # Show the Network Interfaces on the Host.
       ```
-          or  
+                  or  
       ```
         sudo  ip a show wgs0      # Show the Network Interfaces on the Host.
       ```
