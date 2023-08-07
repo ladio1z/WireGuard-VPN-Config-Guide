@@ -289,9 +289,7 @@
      ```
       cat privatekey       
      ```
-
-       ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/0c4266b1-bc44-459b-b938-d49b76b3d593)
-
+      ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/0c4266b1-bc44-459b-b938-d49b76b3d593)
 
      **Step 6** -:   Create a new config file called   wgs0.conf
       ```
@@ -375,16 +373,16 @@
      **Step 9** -:   Check the status. Start and Enable WireGuard Sever. 
                                ## NOTE: PUT  DOWN THE NETWORK INTERFACE  BEFORE EDITTING IT
       ```
-       systemctl status wg-quick@wgs0                # Check the status of wg-quick on wgs0
+       systemctl status wg-quick@wgs0                 # Check the status of wg-quick on wgs0
       ```
       ```                        
-       systemctl start wg-quick@wgs0.service     # Start wg-quick on wgs0  service
+       systemctl start wg-quick@wgs0.service          # Start wg-quick on wgs0  service
       ```
       ```
        systemctl enable wg-quick@wgs0.service         # Enable wg-quick on wgs0 service
       ```
       ```
-       systemctl restart wg-quick@wgs0.service    # Restart the wg-quick on wgs0 service
+       systemctl restart wg-quick@wgs0.service        # Restart the wg-quick on wgs0 service
       ```
       ```
        systemctl stop wg-quick@wgs0.service           # Stop the wq-quick on wgs0 service
