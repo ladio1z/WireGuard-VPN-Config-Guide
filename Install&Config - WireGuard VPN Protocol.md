@@ -176,7 +176,7 @@
     sudo ufw  status                      # Check status of the UFW  
     ````
     
-    ````
+    ```
     sudo   ufw allow 51820/udp        ## Open the port 51820 on UDP
     ```
     
