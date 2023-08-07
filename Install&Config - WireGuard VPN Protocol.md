@@ -188,7 +188,7 @@
     sudo ufw disable                         ## To disable ufw
     ```
 
-  **Step 10a** -:   Bring up  the Network Interface - wgs0 
+    **Step 10a** -:   Bring up  the Network Interface - wgs0 
     ```
     wg-quick  up  wgs0       # Start the wg0 Interface
     ```
@@ -200,7 +200,7 @@
    ![image](https://user-images.githubusercontent.com/113307504/234724657-6ead729e-be03-4c49-a2b0-ddd6a3389e85.png)
 
    
-   **Step 10b** -:  Put down the Network Interface - wgs0               
+    **Step 10b** -:  Put down the Network Interface - wgs0               
     ```
     wg-quick  down wgs0         # To put down wg0 Interface
     ```
@@ -210,10 +210,11 @@
     ```
     
 
-   **Step 11** -:   Check the status. Start and Enable WireGuard Sever. 
+    **Step 11** -:   Check the status. Start and Enable WireGuard Sever. 
                       ## NOTE: PUT  DOWN THE NETWORK INTERFACE  BEFORE EDITTING IT 
     ``` 
-    systemctl status wg-quick@wgs0                # Check the status of wg-quick on wgs0                 ```
+    systemctl status wg-quick@wgs0                # Check the status of wg-quick on wgs0
+    ```
     
     ```
     systemctl start wg-quick@wgs0.service     # Start wg-quick on wgs0  service
@@ -240,65 +241,58 @@
    ### Installation Steps:
     **Step 0** -:   Change the hostname to wgclient1
    
-      ```
-      sudo hostnamectl set-hostname wgclient1
-      ```
+    ```
+    sudo hostnamectl set-hostname wgclient1
+    ```
       
     **Step 1** -:   Update or  Upgrade the package management
       
-      ``` 
-      sudo apt-get update -y  
-      ```
+    ``` 
+    sudo apt-get update -y  
+    ```
       or
       
-      ``` 
-      sudo apt-get upgrade -y 
-      ```
+    ``` 
+    sudo apt-get upgrade -y 
+    ```
 
-      **Step 2** -:   Install iptables,   net-tools
+    **Step 2** -:   Install iptables,   net-tools
+    ```
+    sudo apt-get install iptables net-tools  -y 
+    ```
+  
+    **Step 3** -:   Install WireGuard VPN Software on the System
    
-       ```
-       sudo apt-get install iptables net-tools  -y 
-       ```
+    ``` 
+    sudo apt-get install wireguard -y                 # Ubuntu  
+    ```
+       or
+    ```
+    sudo yum install wireguard-tools -y             # Redhat
+    ```
+   
+    **Step 4a*** -:  Switch to root user profile.
+    ```
+    sudo  su   -    
+    ```
 
-   
-      **Step 3** -:   Install WireGuard VPN Software on the System
-   
-       ``` 
-       sudo apt-get install wireguard -y                 # Ubuntu  
-       ```
-          or
-       ```
-       sudo yum install wireguard-tools -y             # Redhat
-   
-       ```
-   
-      **Step 4a*** -:  Switch to root user profile.
-   
-       ```
-       sudo  su   -    
-       ```
+     **Step 4b*** -:  Go to /etc/wireguard   WireGurad directory
+     ```
+     cd   /etc/wireguard/       
+     ```
 
-      **Step 4b*** -:  Go to /etc/wireguard   WireGurad directory
-   
-       ```
-       cd   /etc/wireguard/       
-       ```
-
-      **Step 5a** -:  Create a private and public key pair for the WireGuard Client
+     **Step 5a** -:  Create a private and public key pair for the WireGuard Client
                           # generate private key through which a publickey is created    
+     ```
+     wg  genkey | tee privatekey | wg pubkey  > publickey      # ls   to list content     
+     ```
 
-       ```
-       wg  genkey | tee privatekey | wg pubkey  > publickey      # ls   to list content     
-       ```
+     **Step 5b** -:  Show and Copy Private key 
 
-      **Step 5b** -:  Show and Copy Private key 
-
-       ```
-       cat privatekey       
-       ```
+     ```
+     cat privatekey       
+     ```
 
       ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/0c4266b1-bc44-459b-b938-d49b76b3d593)
-
-   
+ 
    
