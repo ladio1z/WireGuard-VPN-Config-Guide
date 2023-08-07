@@ -230,5 +230,34 @@
     ```
     systemctl stop wg-quick@wgs0.service          # Stop the wq-quick on wgs0 service
     ```
+  
 
-        
+## At the VPN Client
+   ### Installation Requirement
+ - Any OS
+ - Update or Upgrade the Package Management
+
+   ### Installation Steps:
+    **Step 0** -:   Change the hostname to wgclient1
+      ```
+      sudo hostnamectl set-hostname wgclient1
+      ```
+      
+    **Step 1** -:   Update or  Upgrade the package management
+      
+      ``` 
+      sudo apt-get update -y  
+      ```
+      or
+      
+      ``` 
+      sudo apt-get upgrade -y 
+      ```
+
+      **Step 2** -:   Install iptables,   net-tools
+       ```
+   sudo apt-get install iptables net-tools  -y 
+       ```
+
+   
+   
