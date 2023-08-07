@@ -188,7 +188,8 @@
     sudo ufw disable                         ## To disable ufw
     ```
 
-    **Step 10a** -:   Bring up  the Network Interface - wgs0 
+    **Step 10a** -:   Bring up  the Network Interface - wgs0
+   
     ```
     wg-quick  up  wgs0       # Start the wg0 Interface
     ```
@@ -200,7 +201,8 @@
    ![image](https://user-images.githubusercontent.com/113307504/234724657-6ead729e-be03-4c49-a2b0-ddd6a3389e85.png)
 
    
-    **Step 10b** -:  Put down the Network Interface - wgs0               
+    **Step 10b** -:  Put down the Network Interface - wgs0
+            
     ```
     wg-quick  down wgs0         # To put down wg0 Interface
     ```
