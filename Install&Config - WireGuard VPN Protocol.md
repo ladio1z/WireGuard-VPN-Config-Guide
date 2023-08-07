@@ -28,10 +28,7 @@
       ``` 
       sudo apt-get update -y  
       ```
-      
-               or
-
-      
+   or
       ``` 
       sudo apt-get upgrade -y 
       ```
