@@ -241,18 +241,16 @@
  - Update or Upgrade the Package Management
 
    ### Installation Steps:
-    **Step 0** -:   Change the hostname to wgclient1
-   
+    **Step 0** -:   Change the hostname to wgclient1   
     ```
      sudo hostnamectl set-hostname wgclient1
     ```
       
-    **Step 1** -:   Update or  Upgrade the package management
-      
+    **Step 1** -:   Update or  Upgrade the package management      
     ``` 
      sudo apt-get update -y  
     ```
-      or    
+         or    
     ``` 
      sudo apt-get upgrade -y 
     ```
@@ -262,12 +260,11 @@
      sudo apt-get install iptables net-tools  -y 
     ```
   
-    **Step 3** -:   Install WireGuard VPN Software on the System
-   
+    **Step 3** -:   Install WireGuard VPN Software on the System   
     ``` 
      sudo apt-get install wireguard -y                 # Ubuntu  
     ```
-      or
+         or
     ```
      sudo yum install wireguard-tools -y             # Redhat
     ```
@@ -289,7 +286,6 @@
      ```
 
      **Step 5b** -:  Show and Copy Private key 
-
      ```
       cat privatekey       
      ```
@@ -302,5 +298,96 @@
        touch wgs0.conf
       ```
              
+     **Step 7** -:   Open wgs0.conf  and configure the Network Interface
+      ```
+       vi wgs0.conf
+      ```
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
-   
+      ```		
+	    [Interface]
+	              ## A privatekey of the Client you copied ( cat /etc/wireguard/privatekey )
+	       Privatekey = sDMJiu ……. LhWUY=
+	  	      ## Address: A private IP address for wg0 interface
+	       Address = 120.0.0.2/32
+	              ## Saving Configuration File
+	       SaveConfig =  true
+	
+	                ## Below tell the WG Client to connect or speak to the WG Server….             
+	    [Peer]
+		       ## A public key of the Server ( cat /etc/wireguard/publickey )
+	       Publickey =   gF98uIOMNe ……..sDMJiu=
+	
+	                  ## Public IP address of the WireGuard Server [on the Server ip addr show] 
+	                                         ## also the its ListenPort 
+	               ##NOTE: On the WireGuard Server side, we need to set  'net.ipv4.ip_forward=1'
+	       Endpoint =  192.168.10.1:51820
+	
+	                    ## 0.0.0.0/0, ::/0  ==> All traffic of (IPv4 & IPv6) route to the Server.
+		AllowedIPs = 0.0.0.0/0, ::/0
+	                      ## We can specify specific IPs to pass through from Client to Server
+	                          ## AllowedIPs = 10.10.10.230/32, 120.3.45.9/32, 120.34.50.30/24
+	
+	                    ## Keepalive time (in seconds)
+	        Persistentkeepalive = 25      # 25 seconds
+	             
+      ```
+        
+    ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+      ```
+       :wq!    # To save and quit 
+      ```
+
+      ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/029ffcf4-43bc-4f9f-85e0-550a9b0eb5e2)
+
+
+     **Step 8a** -:   Bring up  the Network Interface - wgs0
+      ```
+       wg-quick  up  wgs0       # Start the wgs0 Interface
+      ```
+      ```
+       wg     or    sudo wg          # Display the Interface Details
+      ```
+          or 
+      ```
+       sudo wg          # Display the Interface Details
+      ```
+
+      ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/237c100f-76b9-478d-9403-66f5cf42634b)
+
+
+     **Step 8b** -:  Put down the Network Interface - wgs0
+      ```             
+        wg-quick  down wgs0         # To put down wg0 Interface
+      ```
+      ```
+        ip link        # Show the Network Interfaces on the Host.
+      ```
+          or  
+      ```
+        sudo  ip a show wgs0      # Show the Network Interfaces on the Host.
+      ```
+
+
+     **Step 9** -:   Check the status. Start and Enable WireGuard Sever. 
+                               ## NOTE: PUT  DOWN THE NETWORK INTERFACE  BEFORE EDITTING IT
+      ```
+       systemctl status wg-quick@wgs0                # Check the status of wg-quick on wgs0
+      ```
+      ```                        
+       systemctl start wg-quick@wgs0.service     # Start wg-quick on wgs0  service
+      ```
+      ```
+       systemctl enable wg-quick@wgs0.service         # Enable wg-quick on wgs0 service
+      ```
+      ```
+       systemctl restart wg-quick@wgs0.service    # Restart the wg-quick on wgs0 service
+      ```
+      ```
+       systemctl stop wg-quick@wgs0.service           # Stop the wq-quick on wgs0 service
+      ```
+### At both ends of the Server and Clients, run command ‘ **wg** ’ or  ‘ **wg show** ‘ ; if the feedback of its comes as the output with handshake interface means connection/a secure tunnel has been established  between nodes.
+
