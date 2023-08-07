@@ -231,6 +231,7 @@
       ```
   
 
+
 ## At the VPN Client
    ### Installation Requirement
  - Any OS
@@ -381,6 +382,7 @@
       ```
        systemctl stop wg-quick@wgs0.service           # Stop the wq-quick on wgs0 service
       ```
+
 #### At both ends of the Server and Clients, run command ‘ **wg** ’ or  ‘ **wg show** ‘ ; if the feedback of its comes as the output with handshake interface means connection/a secure tunnel has been established  between nodes.
 
  <!--
@@ -393,9 +395,10 @@
    |  ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/085287fe-dfb3-4e65-a89e-848e88b93b99) |    ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/dc3782a0-8c12-4eb5-80a8-d3fa170f3d21) |
 
 
-####   Ping respective ips at either ends to confirm the connectivity with each other.   
+####     Ping respective ips at either ends to confirm the connectivity with each other.   
 
-### If ping result is responding on the Server and Clients then a VPN has been created between ends using WireGuard Protocol. 
+#### If ping result is responding on the Server and Clients then a VPN has been created between ends using WireGuard Protocol. 
+
 
 
 ## Thank YOU. 
