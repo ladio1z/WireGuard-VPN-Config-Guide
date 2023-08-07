@@ -296,5 +296,12 @@
      ```
 
       ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/0c4266b1-bc44-459b-b938-d49b76b3d593)
- 
+
+
+     **Step 6** -:   Create a new config file called   wgs0.conf
+      ```
+                       touch wgs0.conf
+      ```
+             
+
    
