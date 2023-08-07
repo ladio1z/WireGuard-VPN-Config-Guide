@@ -249,9 +249,9 @@
     **Step 1** -:   Update or  Upgrade the package management      
     ``` 
      sudo apt-get update -y  
-    ```
+    
                or    
-    ``` 
+    
      sudo apt-get upgrade -y 
     ```
 
