@@ -289,8 +289,8 @@
      ```
       cat privatekey       
      ```
-      ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/0c4266b1-bc44-459b-b938-d49b76b3d593)
-
+     ![image](https://github.com/ladio1z/WireGuard-VPN-Config-Guide/assets/113307504/0c4266b1-bc44-459b-b938-d49b76b3d593)
+ 
      **Step 6** -:   Create a new config file called   wgs0.conf
       ```
        touch wgs0.conf
@@ -387,5 +387,5 @@
       ```
        systemctl stop wg-quick@wgs0.service           # Stop the wq-quick on wgs0 service
       ```
-### At both ends of the Server and Clients, run command ‘ **wg** ’ or  ‘ **wg show** ‘ ; if the feedback of its comes as the output with handshake interface means connection/a secure tunnel has been established  between nodes.
+#### At both ends of the Server and Clients, run command ‘ **wg** ’ or  ‘ **wg show** ‘ ; if the feedback of its comes as the output with handshake interface means connection/a secure tunnel has been established  between nodes.
 
