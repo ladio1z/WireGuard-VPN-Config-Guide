@@ -33,14 +33,12 @@
       sudo apt-get upgrade -y 
       ```
         
-    **Step 2** -:   Install iptables,   net-tools
-     
+    **Step 2** -:   Install iptables,   net-tools     
       ```
       sudo apt-get install iptables net-tools  -y 
       ```
         
-    **Step 3** -:   Install WireGuard VPN Software on the System
-     
+    **Step 3** -:   Install WireGuard VPN Software on the System     
       ```
       sudo apt-get install wireguard -y                 # Ubuntu  
       ``` 
@@ -90,23 +88,23 @@
       ```
 
     **Step 6b** -:  Show and Copy Private key 
-    ```
-    cat privatekey       
-    ```
+      ```
+       cat privatekey       
+      ```
       ![image](https://user-images.githubusercontent.com/113307504/234717642-8a72ea22-facf-456d-92ed-6d408131cbe5.png)
     
     **Step 7** -:   Create a new config file called   wgs0.conf    # ls   to list content     
-    ```
-    touch wgs0.conf       
-    ```
+      ```
+       touch wgs0.conf       
+      ```
     
       ![image](https://user-images.githubusercontent.com/113307504/234725647-82a1ae62-a3c5-4f77-9d0d-8853f182a2f3.png)
 
 
     **Step 8** -:   Open wgs0.conf  and configure the Network Interface as below format.
-    ```
-    vi wgs0.conf       
-    ```
+      ```
+       vi wgs0.conf       
+      ```
     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
     ```		
@@ -170,67 +168,67 @@
               # You could set any other port to listen on this Server
 
     **Step 9** -:   Configure UFW firewall to open WireGuard VPN Server 
-    ```
-    sudo ufw  status                      # Check status of the UFW  
-    ````
+      ```
+       sudo ufw  status                      # Check status of the UFW  
+      ````
     
-    ```
-    sudo   ufw allow 51820/udp        ## Open the port 51820 on UDP
-    ```
+      ```
+      sudo   ufw allow 51820/udp        ## Open the port 51820 on UDP
+      ```
     
-    ```
-    sudo ufw enable                        ## To  enable ufw
-    ```
+      ```
+      sudo ufw enable                        ## To  enable ufw
+      ```
     
-    ```
-    sudo ufw disable                         ## To disable ufw
-    ```
+      ```
+      sudo ufw disable                         ## To disable ufw
+      ```
 
     **Step 10a** -:   Bring up  the Network Interface - wgs0
    
-    ```
-    wg-quick  up  wgs0       # Start the wg0 Interface
-    ```
+      ```
+      wg-quick  up  wgs0       # Start the wg0 Interface
+      ```
     
-    ```
-    wg     or    sudo wg          # Display the Interface Details
-    ```
+      ```
+      wg     or    sudo wg          # Display the Interface Details
+      ```
     
    ![image](https://user-images.githubusercontent.com/113307504/234724657-6ead729e-be03-4c49-a2b0-ddd6a3389e85.png)
 
    
     **Step 10b** -:  Put down the Network Interface - wgs0
             
-    ```
-    wg-quick  down wgs0         # To put down wg0 Interface
-    ```
+      ```
+      wg-quick  down wgs0         # To put down wg0 Interface
+      ```
     
     ```
-    ip link  or  sudo  ip a show wgs0      # Show the Network Interfaces on the Host.
+      ip link  or  sudo  ip a show wgs0      # Show the Network Interfaces on the Host.
     ```
     
 
     **Step 11** -:   Check the status. Start and Enable WireGuard Sever. 
                       ## NOTE: PUT  DOWN THE NETWORK INTERFACE  BEFORE EDITTING IT 
-    ``` 
-    systemctl status wg-quick@wgs0                # Check the status of wg-quick on wgs0
-    ```
+      ``` 
+      systemctl status wg-quick@wgs0                # Check the status of wg-quick on wgs0
+      ```
     
-    ```
-    systemctl start wg-quick@wgs0.service     # Start wg-quick on wgs0  service
-    ```
+      ```
+      systemctl start wg-quick@wgs0.service     # Start wg-quick on wgs0  service
+      ```
     
-    ```
-    systemctl enable wg-quick@wgs0.service        # Enable wg-quick on wgs0 service
-    ```
+      ```
+      systemctl enable wg-quick@wgs0.service        # Enable wg-quick on wgs0 service
+      ```
     
-    ```
-    systemctl restart wg-quick@wgs0.service     # Restart the wg-quick on wgs0 service
-    ```
+      ```
+      systemctl restart wg-quick@wgs0.service     # Restart the wg-quick on wgs0 service
+      ```
     
-    ```
-    systemctl stop wg-quick@wgs0.service          # Stop the wq-quick on wgs0 service
-    ```
+      ```
+      systemctl stop wg-quick@wgs0.service          # Stop the wq-quick on wgs0 service
+      ```
   
 
 ## At the VPN Client
