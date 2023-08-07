@@ -10,7 +10,7 @@
 #### WireGuard is a communication protocol and free and open-source software that implements encrypted virtual private network (VPN), and was designed with the goal of easy use, high speed performance, and low attack surface. WireGuard cryptographic primitives may be faster and it is built into the Linux Kernel.
 
 
-### The below are the procedure for the installation and configuration of a WireGuard VPN between a VPN Server and a Client.
+### The below are the procedures for the installation and configuration of a WireGuard VPN between a VPN Server and a Client.
 
 ## At the VPN Server
    ### Installation Requirement
