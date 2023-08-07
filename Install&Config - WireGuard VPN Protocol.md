@@ -245,9 +245,7 @@
     **Step 1** -:   Update or  Upgrade the package management      
     ``` 
      sudo apt-get update -y  
-    
-               or    
-    
+   or    
      sudo apt-get upgrade -y 
     ```
 
@@ -260,7 +258,7 @@
     ``` 
      sudo apt-get install wireguard -y                 # Ubuntu  
     ```
-              or
+   or
     ```
      sudo yum install wireguard-tools -y             # Redhat
     ```
@@ -345,7 +343,7 @@
       ```
        wg               # Display the Interface Details
       ```
-               or 
+    or 
       ```
        sudo wg          # Display the Interface Details
       ```
@@ -360,7 +358,7 @@
       ```
         ip link        # Show the Network Interfaces on the Host.
       ```
-                  or  
+    or  
       ```
         sudo  ip a show wgs0      # Show the Network Interfaces on the Host.
       ```
@@ -384,4 +382,5 @@
        systemctl stop wg-quick@wgs0.service           # Stop the wq-quick on wgs0 service
       ```
 #### At both ends of the Server and Clients, run command ‘ **wg** ’ or  ‘ **wg show** ‘ ; if the feedback of its comes as the output with handshake interface means connection/a secure tunnel has been established  between nodes.
+
 
